@@ -1,10 +1,10 @@
 package org.lenalab.opensourceenv;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter @Setter @AllArgsConstructor
+@Data
+@AllArgsConstructor
 public class Math {
     private int num1;
     private int num2;

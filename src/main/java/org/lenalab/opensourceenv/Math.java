@@ -1,4 +1,4 @@
-package org.lenalab.cicdenv;
+package org.lenalab.opensourceenv;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,6 +1,7 @@
-package org.lenalab.cicdenv;
+package org.lenalab.opensourcenv;
 
 import org.junit.Test;
+import org.lenalab.opensourceenv.Math;
 
 import static org.junit.jupiter.api.Assertions.*;
 

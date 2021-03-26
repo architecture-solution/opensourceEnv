@@ -12,5 +12,10 @@ public class Math {
     public int sum() {
         return num1+num2;
     }
+    public int minus() {
+        return num1-num2;
+    }
+
+
 
 }

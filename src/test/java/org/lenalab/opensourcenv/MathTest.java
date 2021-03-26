@@ -18,4 +18,16 @@ public class MathTest {
         //then
         assertEquals(3,res);
     }
+
+    @Test
+    public void minusTest() throws Exception {
+        //given
+        Math math = new Math(2,1);
+
+        //when
+        int res = math.minus();
+
+        //then
+        assertEquals(1,res);
+    }
 }

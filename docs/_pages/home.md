@@ -23,9 +23,7 @@ feature_row:
     excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
     url: "/docs/configuration/"
     btn_class: "btn--primary"
-    btn_label: "Learn more1"
-    btn_class: "btn--primary"
-    btn_label: "Learn more2"
+    btn_label: "Learn more"
   - image_path: /assets/images/mm-responsive-feature.png
     alt: "fully responsive"
     title: "Responsive layouts"

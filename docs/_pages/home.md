@@ -7,7 +7,9 @@ header:
   overlay_image: /assets/images/mm-home-page-feature.jpg
   actions:
     - label: "<i class='fas fa-download'></i> Install now"
-      url: "/docs/quick-start-guide/"  
+      url: "/docs/quick-start-guide/"
+    - label: "<i class='fas fa-download'></i> Install now2"
+          url: "/docs/quick-start-guide/"    
       
 excerpt: >
   A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />

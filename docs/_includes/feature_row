@@ -30,8 +30,15 @@
             </div>
           {% endif %}
 
-          {% if f.url %}
-            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          {% if f.url or f.url1 %}
+            <p>
+            {% if f.url %}
+              <a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+            {% endif %}
+            {% if f.url1 %}
+              <a href="{{ f.url1 | relative_url1 }}" class="btn {{ f.btn_class1 }}">{{ f.btn_label1 | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+            {% endif %}
+            </p>
           {% endif %}
         </div>
       </div>

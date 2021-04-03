@@ -37,7 +37,7 @@ jacocoTestReport {
     }
 }
 
-acocoTestCoverageVerification {
+jacocoTestCoverageVerification {
     violationRules {
         rule {
             element = 'CLASS'

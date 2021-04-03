@@ -1,15 +1,15 @@
 # main links
 main:
   - title: "Projects"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: https://github.com/architecture-solution/
   - title: "Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: https://github.com/architecture-solution/
   - title: "Blog"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: /year-archive/
   - title: "Events"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: https://github.com/architecture-solution/
   - title: "GitHub"
-    url: https://github.com/architecture-solution/      
+    url: https://github.com/architecture-solution/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

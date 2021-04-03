@@ -1,5 +1,6 @@
 ---
 title: "Code Coverage"
+classes: wide
 
 categroies:
   - Blog
@@ -57,13 +58,70 @@ gradle test jacocoTestReport jacocoTestCoverageVerification
 ```
 
 ## Codecov 사용법
-* [Codecov 홈페이지](https://about.codecov.io/) 로 이동
-* Codecov 가입 / 로그인 진행
-* Codecov 를 사용할 계정 / Repository 선택 후 Codecov Token 복사  
-![get token](../assets/images/posts/codecovTokenCopy.PNG)
+* Codecov 가입 진행 [(Codecov 홈페이지)](https://about.codecov.io/)
+* Codecov 를 사용할 Github 계정 / Repository 선택하면 Codecov Token 이 발급된다.  
+ 해당 토큰을 복사 후 Github Repository Secret 에 등록 한다.  
+![createCodecovSecretToGithub](../assets/images/posts/createCodecovSecretToGithub.PNG)
+* Github Action 을 이용하여 Gradle test 결과를 Codecov 로 업로드  
+프로젝트 root 의 .github/workflows 디렉토리에 test.yml 을 생성한다. 내용은 아래와 같다.  
+
+```yml
+name: Test with Gradle
+
+on: # Event
+  push:
+    branches: [ master ] 
+  pull_request:
+    branches: [ master ]
+
+jobs: 
+  test: # Job id
+    runs-on: ubuntu-latest # Runner
+    steps:
+    - uses: actions/checkout@v2 # Step
+    - name: Set up JDK 11 
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11 
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Test with Gradle
+      run: ./gradlew test jacocoTestReport jacocoTestCoverageVerification
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./build/reports/jacoco/test/jacocoTestReport.xml
+
+```
+* Pull Request 요청시 bot 을 통한 자동 Test 결과 comment 생성  
+프로젝트 root 에 .codecov.yml 을 생성한다. 내용은 아래와 같다.  
+
+```yml
+comment:                  # this is a top-level key
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: false  # if true: only post the comment if coverage changes
+  require_base: no        # [yes :: must have a base report to post]
+  require_head: yes       # [yes :: must have a head report to post]
+  branches:               # branch names that can post comment
+    - "master"
+```
+
+
+## 기타 참고 사항
+* Lombok에 의해 자동 생성된 코드에 대한 Test Coverage 예외처리 적용  
+프로젝트 root 에 lombok.config 를 생성한다. 내용은 아래와 같다.  
+
+```yml
+config.stopBubbling = true
+lombok.addLombokGeneratedAnnotation = true
+```
+
+
 
 
 ## 참고
 [JaCoCo-Gradle 공식](https://docs.gradle.org/current/userguide/jacoco_plugin.html)  
-[JaCoCo-우아한형제들 블로그](https://woowabros.github.io/experience/2020/02/02/jacoco-config-on-gradle-project.html)
+[JaCoCo-우아한형제들 블로그](https://woowabros.github.io/experience/2020/02/02/jacoco-config-on-gradle-project.html)  
 [CodeCoverage-우아한테크코스](https://woowacourse.github.io/javable/post/2020-10-24-code-coverage/)

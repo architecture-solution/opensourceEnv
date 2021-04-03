@@ -52,6 +52,7 @@ sonarqube {
     property "sonar.projectKey", "architecture-solution_opensourceEnv"
     property "sonar.organization", "architecture-solution"
     property "sonar.host.url", "https://sonarcloud.io"
+    property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/test/jacocoTestReport.xml"
   }
 }
 

@@ -15,10 +15,7 @@ Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행
 ## JaCoCo
 JaCoCo 는 Java Code Coverage 를 측정하는 오픈소스 라이브러리다. 테스트 결과에 따라 xml, html 형태로 보고서가 작성된다. 또한 목표하는 커버리지를 설정하고, 이를 만족하는지 확인 할 수 있다.
 
-## Codecov
-Codecov 는 Code Coverage 결과를 통합 관리하고, Github / Circle CI / Slack 등과 연동하여 사용할 수 있는 편의를 제공한다. 주로 Github PR 분석, PR Block, Merging Report 의 용도로 사용 한다. 
-
-## JaCoCo 설정
+### JaCoCo 설정
 *  Gradle 설정에 플러그인 추가 / 설정 진행  
 [(상세 설정은 본 포스트 하단 참조.)](#참고)  
 
@@ -56,8 +53,10 @@ jacocoTestCoverageVerification {
 ```shell script 
 gradle test jacocoTestReport jacocoTestCoverageVerification
 ```
+## Codecov
+Codecov 는 Code Coverage 결과를 통합 관리하고, Github / Circle CI / Slack 등과 연동하여 사용할 수 있는 편의를 제공한다. 주로 Github PR 분석, PR Block, Merging Report 의 용도로 사용 한다. 
 
-## Codecov 사용법
+### Codecov 사용법
 * Codecov 가입 진행 [(Codecov 홈페이지)](https://about.codecov.io/)
 * Codecov 를 사용할 Github 계정 / Repository 선택하면 Codecov Token 이 발급된다.  
  해당 토큰을 복사 후 Github Repository Secret 에 등록 한다.  

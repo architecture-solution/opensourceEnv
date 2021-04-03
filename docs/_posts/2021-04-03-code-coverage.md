@@ -60,12 +60,10 @@ gradle test jacocoTestReport jacocoTestCoverageVerification
 * [Codecov 홈페이지](https://about.codecov.io/) 로 이동
 * Codecov 가입 / 로그인 진행
 * Codecov 를 사용할 계정 / Repository 선택 후 Codecov Token 복사  
-![get token](./assets/images/posts/codecovTokenCopy.PNG)
+![get token](../assets/images/posts/codecovTokenCopy.PNG)
 
 
 ## 참고
-##### JaCoCo
-https://docs.gradle.org/current/userguide/jacoco_plugin.html  
-https://woowabros.github.io/experience/2020/02/02/jacoco-config-on-gradle-project.html
-##### Code Coverage
-https://woowacourse.github.io/javable/post/2020-10-24-code-coverage/
+[JaCoCo-Gradle 공식](https://docs.gradle.org/current/userguide/jacoco_plugin.html)  
+[JaCoCo-우아한형제들 블로그](https://woowabros.github.io/experience/2020/02/02/jacoco-config-on-gradle-project.html)
+[CodeCoverage-우아한테크코스](https://woowacourse.github.io/javable/post/2020-10-24-code-coverage/)

@@ -19,10 +19,9 @@ Codecov 는 Code Coverage 결과를 통합 관리하고, Github / Circle CI / Sl
 
 ## JaCoCo 설정
 *  Gradle 설정에 플러그인 추가 / 설정 진행  
-[(상세 설정은 본 포스트 하단 참조.)](#참고)
+[(상세 설정은 본 포스트 하단 참조.)](#참고)  
 ```groovy
 plugins {
-    ...
     id 'jacoco'
 }
 
@@ -41,7 +40,6 @@ acocoTestCoverageVerification {
     violationRules {
         rule {
             element = 'CLASS'
-
             limit {
                 counter = 'METHOD'
                 value = 'COVEREDRATIO'

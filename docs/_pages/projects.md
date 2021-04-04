@@ -1,10 +1,10 @@
 ---
 layout: splash
-permalink: /
+permalink: /projects/
 hidden: true
-header:
-  overlay_color: "#5e616c"
-  overlay_image: /assets/images/home_main_image.PNG
+# header:
+#   overlay_color: "#5e616c"
+#   overlay_image: /assets/images/home_main_image.PNG
   # actions:
   #   - label: "<i class='fas fa-download'></i> Install now"
   #     url: "/docs/quick-start-guide/"

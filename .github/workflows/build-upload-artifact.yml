@@ -24,7 +24,7 @@ jobs:
       - name: Ping Artifactory
         uses: katcosgrove/jfrogcli-action@v1.0.0-beta
         with:
-          cmd: 'ping'
+          cmd: 'u "build/libs/opensourceenv-1.0-SNAPSHOT.jar" "sampleRepo/opensourceenv/" --recursive=false'
         env:
           auth: 'username'
           user: ${{ secrets.RT_USER }}

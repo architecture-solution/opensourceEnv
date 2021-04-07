@@ -22,7 +22,7 @@ jobs:
       - name: jFrog CLI for Artifactory
         uses: advancedcsg-open/action-jfrog-cli@v1.2.0
         with:
-          url: 'https://opensourceenv.jfrog.io/'
+          url: 'https://opensourceenv.jfrog.io/artifactory/'
           credentials type: 'username'
           user: ${{ secrets.RT_USER }}
           password: ${{ secrets.RT_PASSWORD }}

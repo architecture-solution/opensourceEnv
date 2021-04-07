@@ -28,5 +28,5 @@ jobs:
           credentials type: 'username'
           user: ${{ secrets.RT_USER }}
           password: ${{ secrets.RT_PASSWORD }}
-          args: u "./build/libs/opensourceenv-1.0-SNAPSHOT.jar" sampleRepo/opensourceenv/ --recursive=true --build-name=opensourceenvBuildName
+          args: u "./build/libs/opensourceenv-1.0-SNAPSHOT.jar" "sampleRepo/opensourceenv/" --recursive=true --build-name=opensourceenvBuildName
 

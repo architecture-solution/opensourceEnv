@@ -22,7 +22,7 @@ jobs:
       - name: Check Jar
         run: ls ./build/libs/
       - name: Ping Artifactory
-        uses: katcosgrove/jfrog-actions@v1.0.0-beta
+        uses: katcosgrove/jfrogcli-action@v1.0.0-beta
         with:
           cmd: 'ping'
         env:

@@ -21,7 +21,7 @@ jobs:
         run: ./gradlew build
       - name: Check Jar
         run: ls ./build/libs/
-      - name: Ping Artifactory
+      - name: Upload Artifact to JFrog
         uses: katcosgrove/jfrogcli-action@v1.0.0-beta
         with:
           cmd: 'u "build/libs/opensourceenv-1.0-SNAPSHOT.jar" "sampleRepo/opensourceenv/" --recursive=false'
@@ -30,11 +30,3 @@ jobs:
           user: ${{ secrets.RT_USER }}
           pass: ${{ secrets.RT_PASSWORD }}
           url: 'https://opensourceenv.jfrog.io/artifactory/'
-      - name: jFrog CLI for Artifactory
-        uses: advancedcsg-open/action-jfrog-cli@v1.2.0
-        with:
-          url: 'https://opensourceenv.jfrog.io/artifactory/'
-          credentials type: 'accesstoken'
-          accesstoken: ${{ secrets.RT_TOKEN }}
-          args: u "./build/libs/opensourceenv-1.0-SNAPSHOT.jar" "mu/sampleRepo/opensourceenv/" --recursive=false --build-name=opensourceenvBuildName
-

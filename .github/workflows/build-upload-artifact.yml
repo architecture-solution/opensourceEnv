@@ -26,5 +26,5 @@ jobs:
           credentials type: 'username'
           user: ${{ secrets.RT_USER }}
           password: ${{ secrets.RT_PASSWORD }}
-          args: u "build/libs/*.jar" sampleRepo/{1}/ --recursive=true --build-name=myawesomeapp
+          args: u "build/libs/*" sampleRepo/{1}/ --recursive=true --build-name=myawesomeapp
 

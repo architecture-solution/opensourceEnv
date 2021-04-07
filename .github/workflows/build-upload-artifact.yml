@@ -21,6 +21,12 @@ jobs:
         run: ./gradlew build
       - name: Check Jar
         run: ls ./build/libs/
+      - name: jForog Cli Official
+        uses: jfrog/setup-jfrog-cli@v1
+        env:
+          JF_ARTIFACTORY_1: ${{ secrets.RT_TOKEN }}
+      - run: |
+          jfrog rt ping
       - name: jFrog CLI for Artifactory
         uses: advancedcsg-open/action-jfrog-cli@v1.2.0
         with:

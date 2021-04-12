@@ -33,6 +33,6 @@ docs:
       - title: "기여절차"
         url: /docs/overriding-theme-defaults/
   - title: "오픈소스 공개하기"
-      children:
-        - title: "공개 절차"
-          url: /docs/configuration/
+    children:
+      - title: "공개 절차"
+        url: /docs/configuration/

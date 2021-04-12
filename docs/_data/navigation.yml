@@ -20,27 +20,19 @@ main:
   #   url: /sitemap/
 
 docs:
-  - title: Getting Started
+  - title: "오픈소스 시작하기"
     children:
-      - title: "Quick-Start Guide"
+      - title: "조직구성"
         url: /docs/quick-start-guide/
-      - title: "Structure"
+      - title: "라이선스"
         url: /docs/structure/
-      - title: "Installation"
-        url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
-  - title: Customization
+  - title: "오픈소스 기여하기"
     children:
-      - title: "Configuration"
+      - title: "기여 Rule"
         url: /docs/configuration/
-      - title: "Overriding Theme Defaults"
+      - title: "기여절차"
         url: /docs/overriding-theme-defaults/
-      - title: "Navigation"
-        url: /docs/navigation/
-      - title: "UI Text"
-        url: /docs/ui-text/
-      - title: "Authors"
-        url: /docs/authors/
-      - title: "Layouts"
-        url: /docs/layouts/  
+  - title: "오픈소스 공개하기"
+      children:
+        - title: "공개 절차"
+          url: /docs/configuration/

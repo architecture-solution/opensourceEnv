@@ -25,7 +25,7 @@ docs:
       - title: "조직구성"
         url: /docs/organization/
       - title: "라이선스"
-        url: /docs/structure/
+        url: /docs/license/
   - title: "오픈소스 기여하기"
     children:
       - title: "기여 Rule"

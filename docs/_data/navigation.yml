@@ -3,7 +3,7 @@ main:
   - title: "Projects"
     url: /projects/
   - title: "Guide"
-    url: /docs/quick-start-guide/
+    url: /docs/organization/
   - title: "Blog"
     url: /year-archive/
   - title: "Events"
@@ -23,7 +23,7 @@ docs:
   - title: "오픈소스 시작하기"
     children:
       - title: "조직구성"
-        url: /docs/quick-start-guide/
+        url: /docs/organization/
       - title: "라이선스"
         url: /docs/structure/
   - title: "오픈소스 기여하기"

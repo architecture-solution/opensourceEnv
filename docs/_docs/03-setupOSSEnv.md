@@ -13,5 +13,8 @@ toc: true
 또한 Travis CI, Circle CI, Codecov, Slack, Sonarcloud, telegram 등 수많은 서비스와 연동하여
 유기적으로 프로젝트를 진행할 수 있다.
 
-![osscicd](../assets/images/osscicd.PNG)
+<figure>
+  <img src="{{ '/assets/images/osscicd.PNG' | relative_url }}" alt="oss cicd">
+</figure>
+
 ## 참고

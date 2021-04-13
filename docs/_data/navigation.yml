@@ -26,6 +26,8 @@ docs:
         url: /docs/organization/
       - title: "라이선스"
         url: /docs/license/
+      - title: "프로젝트 환경구성"
+        url: /docs/setupossenv/  
   - title: "오픈소스 기여하기"
     children:
       - title: "기여 Rule"
